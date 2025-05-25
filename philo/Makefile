@@ -1,11 +1,11 @@
 NAME = philo
 
-SRCS = $(wildcard *.c)
+SRCS = atoi.c  forks.c  gets.c  init.c  main.c  mother.c  philo.c  print.c  time.c
 OBJ = ${SRCS:.c=.o}
 
 CC = cc
 LD = cc
-CFLAGS = -g #-Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 LDFLAGS = -lpthread
 
 all: $(NAME)

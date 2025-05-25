@@ -6,7 +6,7 @@
 /*   By: axlleres <axlleres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 16:49:27 by axlleres          #+#    #+#             */
-/*   Updated: 2025/05/25 03:24:18 by axlleres         ###   ########.fr       */
+/*   Updated: 2025/05/25 20:56:31 by axlleres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,11 @@ void	*mother_main(void *arg)
 		if (get_time(ctx) - ctx->philos[i].last_eat > ctx->time_to_die)
 		{
 			print_death(ctx, i);
-			break;
+			break ;
 		}
 		pthread_mutex_unlock(&ctx->philos[i].eat_mutex);
 		if (check_eat(ctx))
-			break;
+			break ;
 		i = (i + 1) % ctx->philo_num;
 		usleep(1);
 	}

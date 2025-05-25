@@ -6,7 +6,7 @@
 /*   By: axlleres <axlleres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/25 01:29:16 by axlleres          #+#    #+#             */
-/*   Updated: 2025/05/25 01:29:16 by axlleres         ###   ########.fr       */
+/*   Updated: 2025/05/25 21:02:01 by axlleres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #include <stdlib.h>
 #include "philo.h"
 
-int	main(int argc, char **argv) {
+int	main(int argc, char **argv)
+{
 	t_context	ctx;
 	int			i;
 
