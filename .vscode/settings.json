@@ -1,0 +1,16 @@
+{
+	"files.associations": {
+		"pthread.h": "c",
+		"philo.h": "c",
+		"stdio.h": "c",
+		"unistd.h": "c",
+		"confname.h": "c",
+		"unistd_ext.h": "c",
+		"features.h": "c",
+		"posix_opt.h": "c",
+		"types.h": "c",
+		"timesize.h": "c",
+		"wordsize.h": "c",
+		"obstack.h": "c"
+	}
+}
