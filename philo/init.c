@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axlleres <axlleres@student.42.fr>          +#+  +:+       +#+        */
+/*   By: asqel <asqel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 01:58:56 by axlleres          #+#    #+#             */
-/*   Updated: 2025/05/25 01:41:56 by axlleres         ###   ########.fr       */
+/*   Updated: 2025/05/26 15:59:27 by asqel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ static void	init_threads(t_context *ctx)
 		pthread_create(&ctx->threads[i], NULL, philo_main, &ctx->philos[i]);
 		i++;
 	}
-	ctx->start_time = get_time(ctx) + 1000;
+	ctx->start_time = get_time(ctx) + 200;
 	pthread_mutex_unlock(&ctx->start_mutex);
 }
 
@@ -82,7 +82,7 @@ int	init_ctx(t_context *ctx, int argc, char **argv)
 	memset(ctx, 0, sizeof(t_context));
 	ctx->must_eat = -1;
 	if (argc != 5 && argc != 6)
-		return (write(1, "Error: Wrong number of arguments\n", 26), 1);
+		return (write_eroor("Error: Wrong number of arguments"), 1);
 	if (ft_atoi(argv[1], &ctx->philo_num) || (ctx->philo_num <= 0))
 		return (write_error("Error: arg 1 must be a positive integer"), 1);
 	if (ft_atoi(argv[2], &ctx->time_to_die) || (ctx->time_to_die <= 0))
